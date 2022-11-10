@@ -1,17 +1,27 @@
 h1{
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 50px;
 }
 
 ion-content {
   --ion-background-color: linear-gradient(45deg, rgb(133, 192, 219), rgb(115, 236, 216));
+
 }
 
 .login{
   background-color: rgba(0, 0, 0, 0.8);
   position: absolute;
-  top: 30%;
-  left: 35%;
+  top: 25%;
+  left: 40%;
   padding: 80px;
+  border-radius: 15px;
+
 }
+
+a{
+  color: white;
+}
+
+
 
 
