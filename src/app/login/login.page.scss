@@ -1,0 +1,35 @@
+h1{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 50px;
+}
+
+ion-content {
+  --ion-background-color: linear-gradient(45deg, rgb(133, 192, 219), rgb(115, 236, 216));
+}
+
+ion-grid {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.login{
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 50px;
+  border-radius: 15px;
+
+}
+
+a{
+  color: white;
+}
+
+ion-back-button{
+  margin-right: 80%;
+}
+
+
+
+
