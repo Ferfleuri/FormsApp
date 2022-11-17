@@ -3,9 +3,13 @@ h1{
   font-size: 50px;
 }
 
-ion-content {
+.fundo{
   --ion-background-color: linear-gradient(45deg, rgb(133, 192, 219), rgb(115, 236, 216));
 
+}
+
+h1{
+  color: aliceblue;
 }
 
 ion-grid {
