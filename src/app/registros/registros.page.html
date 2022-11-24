@@ -6,26 +6,33 @@
   <ion-grid>
     <div class="login">
   <h1>Registrar</h1>
+  <form [formGroup]="formRegistro">
   <ion-item color="light">
-  <ion-input placeholder="Nome"></ion-input>
+  <ion-input formControlName="nome" placeholder="Nome"></ion-input>
   </ion-item>
   <br><br>
   <ion-item color="light">
-  <ion-input placeholder="CPF"></ion-input>
+  <ion-input formControlName="cpf" placeholder="CPF"></ion-input>
   </ion-item>
     <br><br>
   <ion-item color="light">
-  <ion-input placeholder="E-mail"></ion-input>
+  <ion-input formControlName="email" placeholder="E-mail"></ion-input>
   </ion-item>
   <br><br>
   <ion-item color="light">
-  <ion-input type="password" placeholder="Senha"></ion-input>
+  <ion-input formControlName="senha" type="password" placeholder="Senha"></ion-input>
   </ion-item>
   <br><br>
-  <ion-button fill="outline" >Criar</ion-button>
+  <ion-item color="light">
+  <ion-input type="password" formControlName="confirmarSenha" placeholder="Confirmar Senha"></ion-input>
+  </ion-item>
+  <br><br>
+  <ion-button fill="outline" (click)="SalvarRegistro()" >Salvar</ion-button>
 
   <ion-back-button fill="outline" slot="start" default-href="#">
   </ion-back-button>
+
+</form>
 
 </div>
 
