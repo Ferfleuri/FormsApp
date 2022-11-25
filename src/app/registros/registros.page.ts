@@ -7,10 +7,10 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./registros.page.scss'],
 })
 export class RegistrosPage implements OnInit {
-  formRegistros: FormGroup;
+  formRegistro: FormGroup;
 
   constructor(private formBuilder: FormBuilder) {
-    this.formRegistros = this.formBuilder.group({
+    this.formRegistro = this.formBuilder.group({
       nome:['',Validators.compose([Validators.required,Validators.minLength(3)])],
       cpf:['',Validators.compose([Validators.required])],
       email:['',Validators.compose([Validators.required, Validators.email])],
@@ -22,6 +22,6 @@ export class RegistrosPage implements OnInit {
   ngOnInit() {}
 
   salvarRegistor() {
-    console.log('Formulário: ', this.formRegistros.valid);
+    console.log('Formulário: ', this.formRegistro.valid);
   }
 }

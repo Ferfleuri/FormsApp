@@ -1,35 +1,49 @@
-<ion-header [translucent]="true">
 
-</ion-header>
 
 <ion-content [fullscreen]="true" class="fundo">
   <ion-grid>
     <div class="login">
   <h1>Registrar</h1>
+
   <form [formGroup]="formRegistro">
+
   <ion-item color="light">
   <ion-input formControlName="nome" placeholder="Nome"></ion-input>
   </ion-item>
-  <br><br>
+
+  <br>
+
   <ion-item color="light">
   <ion-input formControlName="cpf" placeholder="CPF"></ion-input>
   </ion-item>
-    <br><br>
+
+    <br>
+
   <ion-item color="light">
   <ion-input formControlName="email" placeholder="E-mail"></ion-input>
   </ion-item>
-  <br><br>
+
+  <br>
+
   <ion-item color="light">
   <ion-input formControlName="senha" type="password" placeholder="Senha"></ion-input>
   </ion-item>
-  <br><br>
+
+  <br>
+
   <ion-item color="light">
   <ion-input type="password" formControlName="confirmarSenha" placeholder="Confirmar Senha"></ion-input>
   </ion-item>
-  <br><br>
+
+  <br>
+
   <ion-button fill="outline" (click)="SalvarRegistro()" >Salvar</ion-button>
-  <ion-back-button fill="outline" slot="start" default-href="/inicio">
-  </ion-back-button>
+
+<br>
+
+  <ion-button fill="outline" routerLink="/inicio">
+    <ion-icon name="play-back-outline"></ion-icon>
+  </ion-button>
 
 </form>
 

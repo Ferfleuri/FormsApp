@@ -1,27 +1,32 @@
-<ion-header>
-
-</ion-header>
 
 <ion-content [fullscreen]="true" class="fundo">
   <ion-grid>
     <div class="login">
       <h1>Login</h1>
+
+      <br>
+
       <ion-item color="light">
         <ion-input placeholder="E-mail"></ion-input>
       </ion-item>
-      <br><br>
+
+      <br>
+
       <ion-item color="light">
         <ion-input type="password" placeholder="Senha"></ion-input>
       </ion-item>
-      <br><br>
+
+      <br>
+
       <ion-button fill="outline">Entrar</ion-button>
       <br>
       <ion-button fill="outline">Esqueceu a senha ?</ion-button>
       <br>
       <ion-button fill="outline" routerLink="/registros">Registrar-se</ion-button>
       <br>
-        <ion-back-button fill="outline" slot="start" default-href="#">
-        </ion-back-button>
+        <ion-button fill="outline" routerLink="/inicio">
+          <ion-icon name="play-back-outline"></ion-icon>
+        </ion-button>
     </div>
   </ion-grid>
 </ion-content>
