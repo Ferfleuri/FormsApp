@@ -47,7 +47,7 @@ export class RegistrosPage implements OnInit {
   constructor(private formBuilder: FormBuilder, private storageService: StorageService, private route: Router) {
     this.formRegistro = this.formBuilder.group({
       nome:['',Validators.compose([Validators.required,Validators.minLength(3)])],
-      cpf:['',Validators.compose([Validators.required, CpfValidator.cpfValido])],
+      cpf:['',Validators.compose([Validators.required,Validators.minLength(11)])],
       email:['',Validators.compose([Validators.required, Validators.email])],
       senha:['',Validators.compose([Validators.required,Validators.minLength(6),Validators.maxLength(8)])],
       confirmarSenha:['',Validators.compose([Validators.required,Validators.minLength(6),Validators.maxLength(8)])],
@@ -58,7 +58,7 @@ export class RegistrosPage implements OnInit {
 
   ngOnInit() {}
 
-  async salvarRegistor() {
+  async salvarRegistro() {
     if (this.formRegistro.valid){
       this.usuario.nome = this.formRegistro.value.nome;
       this.usuario.cpf = this.formRegistro.value.cpf;

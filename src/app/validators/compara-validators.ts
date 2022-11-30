@@ -6,7 +6,7 @@ export const comparaValidator = (
   comparacaoNome: string
 ) => {
   const valida = (formGroup: FormGroup) => {
-    // Pega os campos conforme os nomes que foram passados
+    // Pega os campos conforme os n omes que foram passados
     const controle = formGroup.controls[controleNome];
     const comparacao = formGroup.controls[comparacaoNome];
 
