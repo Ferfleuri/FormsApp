@@ -1,9 +1,20 @@
 <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Usuarios
+    </ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button routerLink="/registros">
+         <ion-icon slot="icon-only" name="person-add-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
 
 </ion-header>
 
 <ion-content [fullscreen]="true" >
-  <ion-item-sliding *ngFor="let user of listaUsuario">
+  <ion-item-sliding *ngFor="let user of listaUsuarios">
 
     <ion-item>
       <ion-label>
@@ -16,7 +27,7 @@
     </ion-item>
 
     <ion-item-options side="end">
-      <ion-item-option>
+      <ion-item-option color="danger"  (click)="excluirCadastro(user.email)" >
       <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
     </ion-item-option>
     </ion-item-options>

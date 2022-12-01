@@ -15,10 +15,16 @@ export class Tab1Page {
 
   async buscarUsuarios(){
     this.listaUsuarios = await this.storageService.getAll();
+    console.log(this.listaUsuarios);
   }
 
    ionViewDidEnter(){
      this.buscarUsuarios();
+   }
+
+  async excluirCadastro(email: string){
+   await this.storageService.remove(email);
+   this.buscarUsuarios();
    }
 
 }
